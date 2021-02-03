@@ -1,12 +1,29 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "node",
+    "module": "esnext",
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
+    "strict": true,
+    "target": "es5",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"],
+      "screens/*": [
+        "src/screens/*"
+      ],
+      "types/*": [
+        "src/types/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ]
+    }
   }
 }

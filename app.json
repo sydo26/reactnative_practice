@@ -1,8 +1,8 @@
 {
   "name": "reactnative_practice",
-  "displayName": "reactnative_practice",
+  "displayName": "App Teste",
   "expo": {
-    "name": "reactnative_practice",
+    "name": "Praticando com React Native",
     "slug": "reactnative_practice",
     "version": "1.0.0",
     "assetBundlePatterns": [
