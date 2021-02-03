@@ -11,10 +11,10 @@ module.exports = function (api) {
           alias: {
             screens: './src/screens',
             underscore: './src/types',
-            assets: './src/assets'
-          }
-        }
-      ]
-    ]
+            assets: './src/assets',
+          },
+        },
+      ],
+    ],
   }
 }

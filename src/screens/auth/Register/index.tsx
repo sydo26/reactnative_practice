@@ -20,15 +20,15 @@ const page = StyleSheet.create({
     width: '100%',
     height: '100%',
     margin: 0,
-    padding: 0
+    padding: 0,
   },
   text: {
     width: '100%',
     height: 'auto',
     textAlign: 'center',
     color: 'black',
-    fontSize: 24
-  }
+    fontSize: 24,
+  },
 })
 
 export default Register
