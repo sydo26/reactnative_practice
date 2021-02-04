@@ -12,6 +12,7 @@ module.exports = function (api) {
             screens: './src/screens',
             underscore: './src/types',
             assets: './src/assets',
+            components: './src/components',
           },
         },
       ],

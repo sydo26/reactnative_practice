@@ -1,10 +1,12 @@
 import React from 'react'
-import { Button, Text, View, StyleSheet } from 'react-native'
-// import {} from 'galio-framework'
+import { Button, Text } from '@ui-kitten/components'
+import { View, StyleSheet } from 'react-native'
 
 import { RootStackParamList, A, B } from 'types/RootStackParamList'
 
-import ChattingSvg from '../../assets/chatting.svg'
+import ChattingSvg from 'assets/chatting.svg'
+
+import { LinkButton } from 'components/Buttons'
 
 type Props = {
   route: A<RootStackParamList, 'Welcome'>; // eslint-disable-line
@@ -14,38 +16,51 @@ type Props = {
 const Welcome = ({ navigation }: Props) => (
   <View style={page.background}>
     <ChattingSvg style={page.chattingSvg} />
-    <Text style={page.title}>Seja bem-vindo(a)</Text>
-    <Text style={page.subtitle}>
-      Venha participar de conversas privadas agora mesmo!
-    </Text>
-    <Button
-      color="orange"
-      title="Comece agora"
+    <View style={page.blocktext}>
+      <Text category="h1" style={{ ...page.text, fontWeight: 'bold' }}>
+        Seja bem-vindo(a)
+      </Text>
+      <Text
+        category="h6"
+        style={{ ...page.text, paddingLeft: 15, paddingRight: 15 }}
+      >
+        Venha participar de conversas privadas agora mesmo!
+      </Text>
+    </View>
+    <LinkButton
+      style={page.button}
+      value="Começar agora"
+      nameIcon="star-outline"
       onPress={() => navigation.navigate('Login')}
+      size="giant"
     />
   </View>
 )
 
 const page = StyleSheet.create({
   chattingSvg: {
+    position: 'absolute',
     width: '100%',
-    height: 220,
-    margin: 'auto',
-    marginTop: 100,
+    height: '100%',
+    maxHeight: 320,
+    maxWidth: 320,
+    minWidth: 280,
+    minHeight: 280,
+    top: 150,
   },
-  title: {
-    fontSize: 28,
-    width: '100%',
-    textAlign: 'center',
-    fontWeight: 'bold',
-    marginTop: 50,
-  },
-  subtitle: {
-    fontSize: 18,
+  text: {
     width: '100%',
     textAlign: 'center',
     marginTop: 10,
-    color: 'rgb(71,71,71)',
+  },
+  blocktext: {
+    position: 'absolute',
+    bottom: 200,
+    width: '100%',
+    height: 'auto',
+    flex: 1,
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   background: {
     position: 'relative',
@@ -59,11 +74,10 @@ const page = StyleSheet.create({
   },
 
   button: {
-    position: 'relative',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingTop: 10,
-    paddingBottom: 10,
+    position: 'absolute',
+    bottom: 20,
+    width: '90%',
+    minWidth: 280,
   },
 })
 
